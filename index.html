@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aunty Approved · First Bai Nian Kit for CNY 2027</title>
+  <meta name="description" content="Visiting your partner's family for the first time this Chinese New Year? The Aunty Approved First Bai Nian kit gives you the gifts, the greetings and every relative's title. Delivered in Singapore before CNY 2027.">
+  <meta name="theme-color" content="#C8102E">
+  <meta property="og:title" content="Aunty Approved · First Bai Nian Kit">
+  <meta property="og:description" content="First time bai nian at their house? Aunty got you.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Reusable SVG symbols: the AUNTY APPROVED rubber stamp -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="stamp-badge" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="7"/>
+      <circle cx="100" cy="100" r="82" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <circle cx="100" cy="100" r="54" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <path id="stamp-arc-top" d="M 37.98 122.57 A 66 66 0 1 1 162.02 122.57" fill="none"/>
+      <path id="stamp-arc-bottom" d="M 30 100 A 70 70 0 0 0 170 100" fill="none"/>
+      <text font-family="'Baloo 2', 'Arial Rounded MT Bold', sans-serif" font-weight="800" font-size="21" letter-spacing="1.5" fill="currentColor">
+        <textPath href="#stamp-arc-top" startOffset="50%" text-anchor="middle">AUNTY APPROVED</textPath>
+      </text>
+      <text font-family="'Baloo 2', 'Arial Rounded MT Bold', sans-serif" font-weight="700" font-size="17" letter-spacing="4" fill="currentColor" dominant-baseline="hanging">
+        <textPath href="#stamp-arc-bottom" startOffset="50%" text-anchor="middle">★ CNY 2027 ★</textPath>
+      </text>
+      <path d="M72 102 l18 19 l38 -42" fill="none" stroke="currentColor" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ 1. ANNOUNCEMENT BAR ============ -->
+<div class="announcement" id="announcement" role="region" aria-label="Announcement">
+  <p id="announcementText">Early-bird prices till 31 Dec · Free delivery above $50</p>
+</div>
+
+<!-- ============ 2. HEADER ============ -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="logo" href="#hero" aria-label="Aunty Approved, back to top">
+      <svg class="logo-stamp" aria-hidden="true"><use href="#stamp-badge"/></svg>
+      <span>Aunty Approved</span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Main">
+      <ul>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn cart-btn" id="cartButton" type="button" aria-label="Open cart, 0 items" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 9V6a3 3 0 0 1 6 0v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span class="cart-count" id="cartCount" aria-hidden="true">0</span>
+      </button>
+      <button class="icon-btn nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="bar-top" d="M4 7h16"/><path class="bar-mid" d="M4 12h16"/><path class="bar-bot" d="M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ 3. ⭐ HERO / CAMPAIGN BANNER ============ -->
+  <section class="hero" id="hero" aria-labelledby="heroTitle">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">CNY 2027 · Year of the Goat · 新年快乐</p>
+        <h1 id="heroTitle">First time bai nian at their house? <span class="hl">Aunty got you.</span></h1>
+        <p class="hero-sub">One kit with the gifts, the greetings and every relative's title, so you walk in confident and walk out with the aunties' approval.</p>
+
+        <div class="countdown" id="countdown" aria-live="off">
+          <p class="countdown-label" id="countdownLabel">Countdown to CNY Day 1 · Sat, 6 Feb 2027</p>
+          <div class="countdown-units" role="timer" aria-labelledby="countdownLabel">
+            <div class="cd-unit"><span class="cd-num" id="cdDays">--</span><span class="cd-name">days</span></div>
+            <div class="cd-unit"><span class="cd-num" id="cdHours">--</span><span class="cd-name">hours</span></div>
+            <div class="cd-unit"><span class="cd-num" id="cdMins">--</span><span class="cd-name">mins</span></div>
+          </div>
+        </div>
+
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" href="#shop">Shop the kits</a>
+          <button class="btn btn-ghost btn-lg" type="button" data-open-chat>Meet Aunty Coach</button>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <svg class="stamp stamp-hero" role="img" aria-label="Aunty Approved stamp"><use href="#stamp-badge"/></svg>
+        <!-- Hero illustration: a friendly goat (2027 zodiac) with red packets and a PAIR of oranges -->
+        <svg class="hero-illustration" viewBox="0 0 400 360" role="img" aria-labelledby="heroArtTitle">
+          <title id="heroArtTitle">A cheerful cartoon goat in a red scarf, holding red packets, next to a pair of mandarin oranges</title>
+          <circle cx="200" cy="190" r="160" fill="#F8DDA8"/>
+          <g fill="#D4A017" opacity=".45"><circle cx="58" cy="70" r="6"/><circle cx="352" cy="98" r="5"/><circle cx="340" cy="300" r="7"/><circle cx="46" cy="280" r="4"/></g>
+          <ellipse cx="200" cy="338" rx="140" ry="12" fill="#2B1B17" opacity=".08"/>
+          <!-- body -->
+          <path d="M120 330 q-6 -100 80 -110 q86 10 80 110 z" fill="#F3E3C3" stroke="#2B1B17" stroke-width="4" stroke-linejoin="round"/>
+          <!-- scarf -->
+          <path d="M140 232 q60 30 120 0 l4 22 q-64 30 -128 0 z" fill="#C8102E" stroke="#8B0000" stroke-width="3"/>
+          <path d="M232 250 l20 46 l-22 -4 l-12 -36 z" fill="#C8102E" stroke="#8B0000" stroke-width="3" stroke-linejoin="round"/>
+          <!-- horns -->
+          <path d="M160 108 q-46 -20 -40 -62 q4 -22 26 -18 q-14 10 -6 30 q8 22 32 30 z" fill="#D4A017" stroke="#2B1B17" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M240 108 q46 -20 40 -62 q-4 -22 -26 -18 q14 10 6 30 q-8 22 -32 30 z" fill="#D4A017" stroke="#2B1B17" stroke-width="4" stroke-linejoin="round"/>
+          <!-- ears -->
+          <path d="M150 132 q-48 -6 -58 18 q30 16 62 -2 z" fill="#F3E3C3" stroke="#2B1B17" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M250 132 q48 -6 58 18 q-30 16 -62 -2 z" fill="#F3E3C3" stroke="#2B1B17" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M108 148 q20 6 40 -2" stroke="#E8A0A0" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <path d="M292 148 q-20 6 -40 -2" stroke="#E8A0A0" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <!-- head -->
+          <path d="M146 120 q54 -40 108 0 q20 60 -10 96 q-44 30 -88 0 q-30 -36 -10 -96 z" fill="#F3E3C3" stroke="#2B1B17" stroke-width="4" stroke-linejoin="round"/>
+          <!-- fringe -->
+          <path d="M170 108 q12 -16 30 -6 q18 -12 30 6 q-14 8 -30 2 q-16 6 -30 -2 z" fill="#E9D3A8" stroke="#2B1B17" stroke-width="3" stroke-linejoin="round"/>
+          <!-- eyes (happy) -->
+          <path d="M168 156 q10 -12 20 0" stroke="#2B1B17" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <path d="M212 156 q10 -12 20 0" stroke="#2B1B17" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <!-- cheeks -->
+          <ellipse cx="164" cy="178" rx="11" ry="7" fill="#F2A2A2" opacity=".8"/>
+          <ellipse cx="236" cy="178" rx="11" ry="7" fill="#F2A2A2" opacity=".8"/>
+          <!-- nose + smile -->
+          <ellipse cx="200" cy="180" rx="9" ry="6" fill="#8B5E3C"/>
+          <path d="M186 194 q14 14 28 0" stroke="#2B1B17" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <!-- beard -->
+          <path d="M190 214 q10 26 20 0" fill="#E9D3A8" stroke="#2B1B17" stroke-width="3" stroke-linejoin="round"/>
+          <!-- red packets held -->
+          <g transform="translate(118 268) rotate(-14)">
+            <rect x="-24" y="-34" width="48" height="68" rx="6" fill="#C8102E" stroke="#8B0000" stroke-width="3"/>
+            <path d="M-24 -28 Q0 -6 24 -28 L24 -28 Q24 -34 18 -34 L-18 -34 Q-24 -34 -24 -28Z" fill="#8B0000"/>
+            <circle cx="0" cy="-6" r="9" fill="#D4A017"/>
+          </g>
+          <g transform="translate(142 276) rotate(4)">
+            <rect x="-24" y="-34" width="48" height="68" rx="6" fill="#C8102E" stroke="#8B0000" stroke-width="3"/>
+            <path d="M-24 -28 Q0 -6 24 -28 L24 -28 Q24 -34 18 -34 L-18 -34 Q-24 -34 -24 -28Z" fill="#8B0000"/>
+            <circle cx="0" cy="-6" r="9" fill="#D4A017"/>
+          </g>
+          <!-- hooves holding -->
+          <ellipse cx="124" cy="300" rx="16" ry="12" fill="#F3E3C3" stroke="#2B1B17" stroke-width="4"/>
+          <!-- PAIR of mandarin oranges (always two) -->
+          <g>
+            <circle cx="262" cy="306" r="24" fill="#F28C28" stroke="#C96A12" stroke-width="3"/>
+            <circle cx="254" cy="298" r="5" fill="#FFB866"/>
+            <path d="M262 282 q8 -14 22 -12 q-6 14 -22 12z" fill="#3E8E41"/>
+            <circle cx="308" cy="306" r="24" fill="#F28C28" stroke="#C96A12" stroke-width="3"/>
+            <circle cx="300" cy="298" r="5" fill="#FFB866"/>
+            <path d="M308 282 q8 -14 22 -12 q-6 14 -22 12z" fill="#3E8E41"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. ⭐ OUR STORY ============ -->
+  <section class="section story" id="story" aria-labelledby="storyTitle">
+    <div class="container narrow">
+      <p class="eyebrow">Our story</p>
+      <h2 id="storyTitle">Every first visit, same panic.</h2>
+      <p>You've been together a while, and now it's happening: your first CNY at their family's house. Suddenly it's 2am and you're googling. How many oranges? Which red packet? Is that lady <span lang="zh-Hans">大姨</span> (dà yí) or just "Aunty"? And is <span lang="zh-Hans">舅舅</span> (jiù jiu) mum's brother or dad's?</p>
+      <p>Aunty has seen it all. The boyfriend who called Ah Ma "auntie". The girlfriend who brought four of something. (Don't, ah.) Nobody tells you the rules, but everybody notices when you get them wrong.</p>
+      <p>So we packed everything into one kit: the right gifts, the right words, the right titles. You just need to show up, smile and say <span lang="zh-Hans">新年快乐</span>. <strong>Don't worry, Aunty got you.</strong></p>
+    </div>
+  </section>
+
+  <!-- ============ 5. TRUST STRIP ============ -->
+  <section class="trust" id="trust" aria-label="Why customers trust us">
+    <ul class="container trust-list">
+      <li>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 14h24v20H4zM28 20h9l7 7v7H28z" fill="#FFF8EC" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><circle cx="13" cy="36" r="4.5" fill="#C8102E" stroke="currentColor" stroke-width="2.5"/><circle cx="36" cy="36" r="4.5" fill="#C8102E" stroke="currentColor" stroke-width="2.5"/></svg>
+        <span>Delivered before CNY</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="15" cy="29" r="10" fill="#F28C28" stroke="#8B4A0E" stroke-width="2.5"/><circle cx="33" cy="29" r="10" fill="#F28C28" stroke="#8B4A0E" stroke-width="2.5"/><path d="M15 19q3-7 9-6q-3 6-9 6zM33 19q3-7 9-6q-3 6-9 6z" fill="#3E8E41"/></svg>
+        <span>Oranges packed fresh</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="19" width="34" height="23" rx="3" fill="#C8102E" stroke="currentColor" stroke-width="2.5"/><rect x="5" y="13" width="38" height="8" rx="2" fill="#C8102E" stroke="currentColor" stroke-width="2.5"/><path d="M24 13v29" stroke="#D4A017" stroke-width="4"/><path d="M24 13q-10-10-13-3q2 4 13 3zM24 13q10-10 13-3q-2 4-13 3z" fill="#D4A017" stroke="currentColor" stroke-width="2"/></svg>
+        <span>Gift it to your partner</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19" fill="none" stroke="#C8102E" stroke-width="3.5"/><circle cx="24" cy="24" r="14" fill="none" stroke="#C8102E" stroke-width="1.5"/><path d="M16 24l6 6l11-12" fill="none" stroke="#C8102E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Titles checked by real aunties</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ 6. ⭐ SHOP / PRODUCT SHOWCASE ============ -->
+  <section class="section shop" id="shop" aria-labelledby="shopTitle">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">The kits</p>
+        <h2 id="shopTitle">Pick your kit</h2>
+        <p class="section-lead" id="shopLead">Early-bird prices till 31 Dec. Every kit is delivered to your door before CNY.</p>
+      </div>
+      <div class="orders-closed-banner" id="shopClosed" hidden>
+        <strong>Orders have closed for CNY 2027.</strong> Thank you for all the love. Gong xi fa cai, and see you next year!
+      </div>
+      <!-- Product cards are rendered from CONFIG.products in script.js -->
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ 7. MEET AUNTY COACH ============ -->
+  <section class="section coach" id="coach" aria-labelledby="coachTitle">
+    <div class="container coach-inner">
+      <div class="coach-bubbles" aria-hidden="true">
+        <p class="bubble bubble-you">Aunty, what do I call my girlfriend's mum's younger brother?</p>
+        <p class="bubble bubble-aunty"><span lang="zh-Hans">舅舅</span> (jiù jiu)! Say it with a smile and pass the oranges with two hands, okay?</p>
+      </div>
+      <div class="coach-copy">
+        <p class="eyebrow">Meet Aunty Coach</p>
+        <h2 id="coachTitle">Got a question? Ask Aunty.</h2>
+        <p>Not sure what to call your girlfriend's mum's younger brother? Ask Aunty Coach. She'll help with titles, greetings, and what not to say.</p>
+        <button class="btn btn-gold btn-lg" type="button" data-open-chat>Chat with Aunty Coach</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ⭐ PRE-ORDER / CHECKOUT ============ -->
+  <section class="section checkout" id="checkout" aria-labelledby="checkoutTitle">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Pre-order</p>
+        <h2 id="checkoutTitle" tabindex="-1">Checkout</h2>
+      </div>
+
+      <!-- State A: orders closed -->
+      <div class="orders-closed-banner" id="checkoutClosed" hidden>
+        <strong>Orders have closed for CNY 2027.</strong> Our last delivery run is out the door. If you have a question about an existing order, email us at <span class="placeholder">[CONTACT EMAIL]</span>.
+      </div>
+
+      <!-- State B: empty cart, how pre-ordering works -->
+      <div class="checkout-empty" id="checkoutEmpty">
+        <ol class="how-steps">
+          <li><span class="how-num">1</span><div><h3>Pick your kit</h3><p>Starter, Classic or Meet-the-Parents. Buying for yourself or gifting your partner, both can.</p></div></li>
+          <li><span class="how-num">2</span><div><h3>Check out here</h3><p>Fill in delivery details, tell us about the family if you're getting a personalised cheat sheet, then pay (demo only).</p></div></li>
+          <li><span class="how-num">3</span><div><h3>We deliver by 3 Feb</h3><p>Pick a delivery date between 26 Jan and 3 Feb. Island-wide, delivery only. Oranges packed fresh.</p></div></li>
+        </ol>
+        <ul class="key-dates" id="keyDates">
+          <li><strong>31 Dec 2026, 23:59</strong> Early-bird prices end</li>
+          <li><strong>30 Jan 2027, 23:59</strong> Last day to order</li>
+          <li><strong>3 Feb 2027</strong> All kits delivered</li>
+          <li><strong>6 Feb 2027</strong> CNY Day 1, go bai nian!</li>
+        </ul>
+        <div class="checkout-empty-cta">
+          <p>Your cart is empty for now. Pick a kit and come back here to check out.</p>
+          <a class="btn btn-primary" href="#shop">Shop the kits</a>
+          <p class="small muted">Questions first? Email <span class="placeholder">[CONTACT EMAIL]</span> or DM us on Instagram <span class="placeholder">[INSTAGRAM HANDLE]</span>.</p>
+        </div>
+      </div>
+
+      <!-- State C: the multi-step checkout flow -->
+      <div class="checkout-flow" id="checkoutFlow" hidden>
+        <ol class="progress" id="progress" aria-label="Checkout progress"></ol>
+
+        <div class="checkout-layout">
+          <form class="checkout-form" id="checkoutForm" novalidate>
+
+            <!-- Step 1: Your details -->
+            <fieldset class="step" data-step="details">
+              <legend><h3 class="step-title" tabindex="-1">Your details</h3></legend>
+              <p class="req-note"><span aria-hidden="true">*</span> Required</p>
+              <div class="field">
+                <label for="fName">Full name <span class="req" aria-hidden="true">*</span></label>
+                <input id="fName" name="name" type="text" autocomplete="name" required maxlength="80">
+                <p class="error" id="fName-error"></p>
+              </div>
+              <div class="field">
+                <label for="fEmail">Email <span class="req" aria-hidden="true">*</span></label>
+                <input id="fEmail" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="120">
+                <p class="hint" id="fEmail-hint">We'll send your order confirmation here.</p>
+                <p class="error" id="fEmail-error"></p>
+              </div>
+              <div class="field">
+                <label for="fMobile">Mobile number <span class="req" aria-hidden="true">*</span></label>
+                <div class="input-prefix"><span aria-hidden="true">+65</span><input id="fMobile" name="mobile" type="tel" autocomplete="tel-national" inputmode="numeric" required maxlength="12" placeholder="9123 4567"></div>
+                <p class="hint" id="fMobile-hint">Singapore number, 8 digits starting with 8 or 9.</p>
+                <p class="error" id="fMobile-error"></p>
+              </div>
+              <div class="step-nav">
+                <button class="btn btn-primary btn-block" type="button" data-next>Next: Delivery</button>
+              </div>
+            </fieldset>
+
+            <!-- Step 2: Delivery -->
+            <fieldset class="step" data-step="delivery" hidden>
+              <legend><h3 class="step-title" tabindex="-1">Delivery</h3></legend>
+              <p class="info-note">Island-wide delivery only, S$4.90 flat, free for orders S$50 and above. No self-collection.</p>
+
+              <div class="toggle-field">
+                <input type="checkbox" id="fIsGift" name="isGift" role="switch">
+                <label for="fIsGift"><span class="switch" aria-hidden="true"></span> This is a gift for someone else</label>
+              </div>
+
+              <div class="gift-fields" id="giftFields" hidden>
+                <p class="info-note gift-note">Sweet! We'll deliver to your partner's address below.</p>
+                <div class="field">
+                  <label for="fRecipientName">Recipient's name <span class="req" aria-hidden="true">*</span></label>
+                  <input id="fRecipientName" name="recipientName" type="text" maxlength="80" autocomplete="off">
+                  <p class="error" id="fRecipientName-error"></p>
+                </div>
+                <div class="field">
+                  <label for="fRecipientMobile">Recipient's mobile <span class="req" aria-hidden="true">*</span></label>
+                  <div class="input-prefix"><span aria-hidden="true">+65</span><input id="fRecipientMobile" name="recipientMobile" type="tel" inputmode="numeric" maxlength="12" placeholder="8123 4567" autocomplete="off"></div>
+                  <p class="hint" id="fRecipientMobile-hint">So our driver can reach them.</p>
+                  <p class="error" id="fRecipientMobile-error"></p>
+                </div>
+                <div class="field">
+                  <label for="fGiftMessage">Gift message <span class="optional">(optional)</span></label>
+                  <textarea id="fGiftMessage" name="giftMessage" rows="3" maxlength="150" placeholder="Don't be nervous, they'll love you!"></textarea>
+                  <p class="hint counter" id="fGiftMessage-hint" aria-live="polite"><span id="giftCount">0</span>/150 characters</p>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="fAddress"><span id="addressLabel">Delivery address</span> <span class="req" aria-hidden="true">*</span></label>
+                <input id="fAddress" name="address" type="text" autocomplete="street-address" required maxlength="160" placeholder="Blk 123 Toa Payoh Lor 1">
+                <p class="error" id="fAddress-error"></p>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="fUnit">Unit number <span class="optional">(optional)</span></label>
+                  <input id="fUnit" name="unit" type="text" maxlength="20" placeholder="#08-123" autocomplete="address-line2">
+                  <p class="hint" id="fUnit-hint">Leave blank for landed homes.</p>
+                </div>
+                <div class="field">
+                  <label for="fPostal">Postal code <span class="req" aria-hidden="true">*</span></label>
+                  <input id="fPostal" name="postal" type="text" inputmode="numeric" autocomplete="postal-code" required placeholder="310123">
+                  <p class="error" id="fPostal-error"></p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="fDeliveryDate">Preferred delivery date <span class="req" aria-hidden="true">*</span></label>
+                <select id="fDeliveryDate" name="deliveryDate" required></select>
+                <p class="hint" id="fDeliveryDate-hint">All kits arrive by 3 Feb, in time for CNY Eve.</p>
+                <p class="error" id="fDeliveryDate-error"></p>
+              </div>
+              <div class="step-nav">
+                <button class="btn btn-ghost" type="button" data-back>Back</button>
+                <button class="btn btn-primary" type="button" data-next>Next</button>
+              </div>
+            </fieldset>
+
+            <!-- Step 3: Personalisation (only when a Meet-the-Parents Kit is in the cart) -->
+            <fieldset class="step" data-step="personalise" hidden>
+              <legend><h3 class="step-title" tabindex="-1">Personalise your cheat sheet</h3></legend>
+              <p>Your Meet-the-Parents Kit comes with a cheat sheet built from your partner's actual family. Tell Aunty a bit about them.</p>
+              <div class="field">
+                <label for="fDialect">Partner's family dialect <span class="req" aria-hidden="true">*</span></label>
+                <select id="fDialect" name="dialect">
+                  <option value="">Choose one</option>
+                  <option>Hokkien</option>
+                  <option>Cantonese</option>
+                  <option>Teochew</option>
+                  <option>Mandarin</option>
+                  <option>Not sure</option>
+                </select>
+                <p class="error" id="fDialect-error"></p>
+              </div>
+              <div class="field">
+                <label for="fFamily">Describe the family <span class="req" aria-hidden="true">*</span></label>
+                <textarea id="fFamily" name="family" rows="4" maxlength="500" placeholder="e.g. Her mum has 2 younger brothers and 1 older sister. Her dad is the eldest of 3. Grandma (dad's side) will be there."></textarea>
+                <p class="hint counter" id="fFamily-hint"><span id="familyCount">0</span>/500 characters</p>
+                <p class="error" id="fFamily-error"></p>
+              </div>
+              <p class="info-note stamp-note"><svg class="mini-stamp" aria-hidden="true"><use href="#stamp-badge"/></svg> Aunty Coach and our team will check every title by hand before printing.</p>
+              <div class="step-nav">
+                <button class="btn btn-ghost" type="button" data-back>Back</button>
+                <button class="btn btn-primary" type="button" data-next>Next: Review</button>
+              </div>
+            </fieldset>
+
+            <!-- Step 4: Review & confirm -->
+            <fieldset class="step" data-step="review" hidden>
+              <legend><h3 class="step-title" tabindex="-1">Review and confirm</h3></legend>
+              <div class="review" id="reviewBlock"></div>
+
+              <div class="checks">
+                <div class="check">
+                  <input type="checkbox" id="fAgreeTerms" name="agreeTerms" required aria-describedby="fAgreeTerms-error">
+                  <label for="fAgreeTerms">I agree to the <button type="button" class="link-btn" data-policy="terms">Terms &amp; Conditions</button> and <button type="button" class="link-btn" data-policy="privacy">Privacy Policy</button>. <span class="req" aria-hidden="true">*</span></label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" id="fAgreePdpa" name="agreePdpa" required>
+                  <label for="fAgreePdpa">I understand this is a student project and my details are used only to process this order (PDPA). <span class="req" aria-hidden="true">*</span></label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" id="fMarketing" name="marketing">
+                  <label for="fMarketing">Send me CNY tips and updates from Aunty Approved. <span class="optional">(optional)</span></label>
+                </div>
+                <p class="error" id="fAgreeTerms-error"></p>
+              </div>
+              <p class="error closed-error" id="reviewClosedError" role="alert"></p>
+              <div class="step-nav">
+                <button class="btn btn-ghost" type="button" data-back>Back</button>
+                <button class="btn btn-primary" type="button" id="toPaymentBtn" disabled>Continue to payment</button>
+              </div>
+              <p class="hint center" id="toPaymentHint">Tick both required boxes to continue.</p>
+            </fieldset>
+
+            <!-- Step 5: Demo payment (mock PayNow, no real money) -->
+            <div class="step" data-step="payment" hidden>
+              <h3 class="step-title" tabindex="-1">Pay with PayNow</h3>
+              <div class="demo-banner" role="note"><strong>Demo payment.</strong> No money will be charged.</div>
+              <div class="paynow">
+                <p class="paynow-amount">Amount to pay <strong id="payTotal">S$0.00</strong></p>
+                <div class="qr-wrap">
+                  <!-- NOT a real PayNow QR. Decorative pattern only, cannot be scanned. -->
+                  <svg class="qr" id="qrSvg" viewBox="0 0 29 29" role="img" aria-label="Demo QR-style pattern. Not a real PayNow code, cannot be scanned."></svg>
+                  <span class="qr-watermark" aria-hidden="true">DEMO</span>
+                </div>
+                <dl class="paynow-meta">
+                  <div><dt>Pay to</dt><dd>Aunty Approved</dd></div>
+                  <div><dt>UEN</dt><dd id="payUen">[DEMO-UEN-000000000X]</dd></div>
+                  <div><dt>Reference</dt><dd id="payRef">AA-2027-XXXX</dd></div>
+                </dl>
+                <p class="pay-timer" id="payTimerWrap">Complete payment within <strong id="payTimer">10:00</strong></p>
+                <p class="error" id="payTimerExpired" hidden>Time's up. No worries, it's only a demo. <button type="button" class="link-btn" id="restartTimer">Restart the timer</button></p>
+              </div>
+              <div class="submit-error" id="submitError" role="alert" hidden>
+                <p><strong>Alamak, something went wrong sending your order.</strong> Your cart and details are still here. Please check your connection and try again.</p>
+                <button class="btn btn-primary" type="button" id="retrySubmit">Try again</button>
+              </div>
+              <div class="step-nav">
+                <button class="btn btn-ghost" type="button" data-back id="payBackBtn">Back</button>
+                <button class="btn btn-primary" type="button" id="simulatePayBtn">
+                  <span class="btn-label">Simulate payment</span>
+                  <span class="spinner" aria-hidden="true"></span>
+                </button>
+              </div>
+              <p class="processing" id="processingMsg" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <!-- Order summary sidebar (collapsible on mobile) -->
+          <aside class="summary-card" aria-label="Order summary">
+            <details class="summary-details" id="summaryDetails" open>
+              <summary><span>Order summary</span> <strong id="summaryTotalShort">S$0.00</strong></summary>
+              <div id="summaryBody"></div>
+            </details>
+          </aside>
+        </div>
+      </div>
+
+      <!-- State D: order confirmation -->
+      <div class="confirmation" id="confirmation" hidden>
+        <svg class="stamp stamp-confirm" role="img" aria-label="Aunty Approved stamp"><use href="#stamp-badge"/></svg>
+        <h3 class="confirm-title" id="confirmTitle" tabindex="-1">Aunty approves! Your order is in.</h3>
+        <p class="order-no">Order number <strong id="confirmOrderNo">AA-2027-XXXX</strong></p>
+        <p class="paid-pill">✓ Payment received (demo)</p>
+        <div class="confirm-grid" id="confirmBody"></div>
+        <p class="confirm-email" id="confirmEmail">A confirmation email is on its way.</p>
+        <button class="btn btn-primary btn-lg" type="button" id="backToShop">Back to shop</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. FAQ ============ -->
+  <section class="section faq" id="faq" aria-labelledby="faqTitle">
+    <div class="container narrow">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faqTitle">Aunty answers your questions</h2>
+      <div class="accordion">
+        <details>
+          <summary>When is the last day to order?</summary>
+          <div class="acc-body"><p>Order by <strong>30 Jan 2027, 23:59</strong> (Singapore time) for guaranteed delivery by <strong>3 Feb</strong>, before CNY Eve on 5 Feb. Orders close completely after that. Early-bird prices end on <strong>31 Dec 2026, 23:59</strong>.</p></div>
+        </details>
+        <details>
+          <summary>Do you deliver? Can I self-collect?</summary>
+          <div class="acc-body"><p>We deliver island-wide for a flat S$4.90, and it's <strong>free for orders S$50 and above</strong> (after early-bird discounts). We're delivery only, so there's no self-collection. You pick a delivery date between 26 Jan and 3 Feb 2027.</p></div>
+        </details>
+        <details>
+          <summary>Can I buy it as a gift for my partner?</summary>
+          <div class="acc-body"><p>Of course, so sweet! At checkout, switch on <strong>"This is a gift for someone else"</strong>, enter your partner's name, mobile and address, and add a short gift message (up to 150 characters). We'll deliver straight to them.</p></div>
+        </details>
+        <details>
+          <summary>How does the personalised cheat sheet work?</summary>
+          <div class="acc-body"><p>It comes with the Meet-the-Parents Kit. At checkout you tell us the family's dialect (Hokkien, Cantonese, Teochew or Mandarin) and describe the family, e.g. "her mum has 2 younger brothers and 1 older sister". Aunty Coach and our team map each relative to the right title, with Chinese characters and pronunciation, and <strong>check every title by hand before printing</strong>. If anything is unclear, we'll contact you before we print.</p></div>
+        </details>
+        <details>
+          <summary>Will the oranges stay fresh?</summary>
+          <div class="acc-body"><p>Yes. We pack the mandarin oranges close to dispatch in late January, so they reach you fresh by 3 Feb. Keep them somewhere cool and dry. And yes, they always come in a pair, as they should.</p></div>
+        </details>
+        <details>
+          <summary>How does payment work?</summary>
+          <div class="acc-body"><p>Aunty Approved is a student project, so the PayNow screen at checkout is a <strong>demo</strong>. No money is charged, and we never ask for card or bank details. Please don't send real payments.</p></div>
+        </details>
+        <details>
+          <summary>Can I cancel my order?</summary>
+          <div class="acc-body"><p>Yes, free of charge, any time before dispatch (until <strong>25 Jan 2027</strong>). Just email <span class="placeholder">[CONTACT EMAIL]</span> with your order number. Personalised cheat sheets that have already been printed can't be cancelled. See <button type="button" class="link-btn" data-policy="delivery">Delivery &amp; Returns</button> for details.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ 9. FOOTER ============ -->
+<footer class="site-footer" id="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <svg class="footer-stamp" aria-hidden="true"><use href="#stamp-badge"/></svg>
+      <div>
+        <p class="footer-name">Aunty Approved</p>
+        <p class="footer-tag">First Bai Nian kits for CNY 2027. Made with love in Singapore.</p>
+      </div>
+    </div>
+    <nav aria-label="Policies">
+      <ul class="footer-links">
+        <li><button type="button" class="link-btn" data-policy="terms">Terms &amp; Conditions</button></li>
+        <li><button type="button" class="link-btn" data-policy="privacy">Privacy Policy</button></li>
+        <li><button type="button" class="link-btn" data-policy="delivery">Delivery &amp; Returns</button></li>
+      </ul>
+    </nav>
+    <ul class="footer-contact">
+      <li>Instagram: <span class="placeholder">[INSTAGRAM HANDLE]</span></li>
+      <li>Email: <span class="placeholder">[CONTACT EMAIL]</span></li>
+    </ul>
+    <p class="copyright">© 2026 Aunty Approved · A student project. Payments on this site are demo only.</p>
+  </div>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<dialog class="drawer" id="cartDrawer" aria-labelledby="cartTitle">
+  <div class="drawer-inner">
+    <div class="drawer-head">
+      <h2 id="cartTitle">Your cart</h2>
+      <button class="icon-btn" type="button" data-close aria-label="Close cart">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="drawer-body" id="cartBody"></div>
+    <div class="drawer-foot" id="cartFoot"></div>
+  </div>
+</dialog>
+
+<!-- ============ PRODUCT DETAIL MODAL ============ -->
+<dialog class="modal" id="productModal" aria-labelledby="pmTitle">
+  <div class="modal-inner">
+    <button class="icon-btn modal-close" type="button" data-close aria-label="Close product details">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </button>
+    <div id="productModalBody"></div>
+  </div>
+</dialog>
+
+<!-- ============ POLICY MODAL (Terms / Privacy / Delivery) ============ -->
+<dialog class="modal policy-modal" id="policyModal" aria-labelledby="policyTitle">
+  <div class="modal-inner">
+    <button class="icon-btn modal-close" type="button" data-close aria-label="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </button>
+    <div class="policy-body" id="policyBody"></div>
+  </div>
+</dialog>
+
+<template id="tpl-terms">
+  <h2 id="policyTitle">Terms &amp; Conditions</h2>
+  <p class="muted small">Last updated: November 2026</p>
+  <p>Thanks for shopping with Aunty Approved! Here are the ground rules, in plain English.</p>
+  <h3>1. Pre-orders</h3>
+  <p>All kits are pre-orders. Your order is confirmed once payment is received. <strong>Payment on this site is a demo</strong>: Aunty Approved is a student project and no real money is charged.</p>
+  <h3>2. Prices</h3>
+  <p>All prices are in Singapore dollars (SGD). Early-bird prices apply to orders placed by <strong>31 Dec 2026, 23:59 SGT</strong>. After that, usual prices apply.</p>
+  <h3>3. Order cut-off</h3>
+  <p>The last day to order is <strong>30 Jan 2027, 23:59 SGT</strong>. Orders close after that.</p>
+  <h3>4. If we can't fulfil your order</h3>
+  <p>If an item becomes unavailable, we may cancel your order and give you a full refund. We'll let you know as soon as possible.</p>
+  <h3>5. Personalised cheat sheets</h3>
+  <p>Personalised cheat sheets are prepared from the details you give us at checkout. We check every title by hand, but families are complicated, so please read through your cheat sheet when it arrives and tell us quickly if something looks off.</p>
+  <h3>6. Images</h3>
+  <p>Product images are illustrations. The actual items may look slightly different.</p>
+  <h3>7. Governing law</h3>
+  <p>These terms are governed by the laws of Singapore.</p>
+  <p>Questions? Email <span class="placeholder">[CONTACT EMAIL]</span>.</p>
+</template>
+
+<template id="tpl-privacy">
+  <h2 id="policyTitle">Privacy Policy</h2>
+  <p class="muted small">Last updated: November 2026 · In line with Singapore's Personal Data Protection Act (PDPA)</p>
+  <h3>What we collect</h3>
+  <ul>
+    <li>Your name, email and mobile number</li>
+    <li>Your delivery address, unit number and postal code</li>
+    <li>Gift details if you're sending a kit to someone else (their name, mobile and your message)</li>
+    <li>Family details for personalised cheat sheets (dialect and a description of the family)</li>
+  </ul>
+  <h3>Why we collect it</h3>
+  <ul>
+    <li>To process, prepare and deliver your order, and to contact you about it</li>
+    <li>To send CNY tips and updates, <strong>only if you opt in</strong> at checkout</li>
+  </ul>
+  <h3>Who we share it with</h3>
+  <p>We don't sell your data. We only share what's needed (name, mobile, address) with our delivery partner so they can deliver your kit.</p>
+  <h3>How long we keep it</h3>
+  <p>We keep your data only until the end of the CNY 2027 campaign, then delete it.</p>
+  <h3>Your choices</h3>
+  <p>Want to see, correct or delete your data, or stop marketing emails? Email <span class="placeholder">[CONTACT EMAIL]</span> and we'll sort it out.</p>
+</template>
+
+<template id="tpl-delivery">
+  <h2 id="policyTitle">Delivery &amp; Returns</h2>
+  <p class="muted small">Last updated: November 2026</p>
+  <h3>Delivery</h3>
+  <ul>
+    <li>Island-wide delivery in Singapore: <strong>S$4.90 flat</strong>, <strong>free for orders S$50 and above</strong> (after discounts).</li>
+    <li>Delivery dates run from 26 Jan up to <strong>3 Feb 2027</strong>. Order by 30 Jan 2027, 23:59 SGT for guaranteed delivery before CNY.</li>
+    <li>We are <strong>delivery only</strong>. There is no self-collection.</li>
+  </ul>
+  <h3>Cancellations</h3>
+  <p>You can cancel for free any time before dispatch, until <strong>25 Jan 2027</strong>. Email <span class="placeholder">[CONTACT EMAIL]</span> with your order number.</p>
+  <h3>Returns</h3>
+  <ul>
+    <li>Mandarin oranges and goodies are perishable, so we can't accept returns on food items.</li>
+    <li>Personalised items (like your custom cheat sheet) can't be returned unless we made an error.</li>
+  </ul>
+  <h3>Damaged or wrong items</h3>
+  <p>So sorry if that happens! Tell us within <strong>48 hours</strong> of delivery, with a photo, and we'll send a replacement or refund you.</p>
+</template>
+
+<!-- Toast (top-centre, never bottom-right, so the chat bubble has space) -->
+<div class="toast" id="toast" popover="manual" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+
+<!-- PASTE AUNTY COACH CHATBOT EMBED SCRIPT HERE -->
+</body>
+</html>
