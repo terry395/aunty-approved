@@ -21,7 +21,7 @@ A mobile-first online shop for young couples in Singapore visiting their partner
 | Instagram `@auntyapproved.sg` (fictional, links to instagram.com) | `index.html`: search `auntyapproved.sg` (footer, checkout section) |
 | Email `hello@auntyapproved.sg` (fictional, links to gmail.com) | `index.html`: search `hello@auntyapproved.sg` (footer, checkout, FAQ, all three policies) |
 | `[DEMO-UEN-000000000X]` | `CONFIG.payment.demoUen` in `script.js` (keep it fake) |
-| Kit images | `assets/*.svg`. Drop in e.g. `assets/classic-kit.jpg` and update `image:` in `CONFIG.products` |
+| Kit images (done) | `assets/starter-kit.jpg`, `classic-kit.jpg`, `meet-the-parent-kit.jpg`. To change one, upload a new file and update `image:` in `CONFIG.products` |
 
 ## Testing different dates
 

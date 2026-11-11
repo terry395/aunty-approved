@@ -52,8 +52,8 @@ const CONFIG = {
       tagline: "The essentials, so you don't walk in empty-handed.",
       earlyBirdPrice: 15,
       usualPrice: 18,
-      image: "assets/starter-kit.svg",   // replace with e.g. assets/starter-kit.jpg (your AI image)
-      imageAlt: "Starter Kit illustration: goat-year red packets and a pocket cheat sheet",
+      image: "assets/starter-kit.jpg",   // swap for another file in assets/ any time
+      imageAlt: "Starter Kit: a fan of red packets with a gold goat design, next to a folded red pocket cheat sheet",
       popular: false,
       needsPersonalisation: false,
       contents: [
@@ -69,8 +69,8 @@ const CONFIG = {
       tagline: "Everything you need to bai nian like a pro.",
       earlyBirdPrice: 32,
       usualPrice: 38,
-      image: "assets/classic-kit.svg",
-      imageAlt: "Classic Kit illustration: red packets, cheat sheet, a pair of mandarin oranges, a red gift bag and a gold goodies tin",
+      image: "assets/classic-kit.jpg",
+      imageAlt: "Classic Kit: goat red packets, a pocket cheat sheet, a pair of mandarin oranges in a red gift bag and an open gold goodies tin",
       popular: true,
       needsPersonalisation: false,
       contents: [
@@ -86,8 +86,8 @@ const CONFIG = {
       tagline: "For when it really, really matters.",
       earlyBirdPrice: 58,
       usualPrice: 68,
-      image: "assets/mtp-kit.svg",
-      imageAlt: "Meet-the-Parents Kit illustration: premium goodies box, personalised cheat sheet, greeting card, red packets and a pair of oranges",
+      image: "assets/meet-the-parent-kit.jpg",
+      imageAlt: "Meet-the-Parents Kit: a red premium gift box with a pair of mandarin oranges, greeting card, goodies tins, goat red packets and a personalised family-tree cheat sheet",
       popular: false,
       needsPersonalisation: true,
       contents: [
@@ -358,10 +358,11 @@ const CONFIG = {
     $("#shopClosed").hidden = !closed;
     $("#productGrid").innerHTML = CONFIG.products.map((p) => `
       <article class="product-card ${p.popular ? "popular" : ""}" data-id="${p.id}" aria-labelledby="pt-${p.id}">
-        ${p.popular ? `<span class="ribbon">Most popular</span><svg class="card-stamp" role="img" aria-label="Aunty Approved stamp"><use href="#stamp-badge"/></svg>` : ""}
+        ${p.popular ? `<span class="ribbon">Most popular</span>` : ""}
         <div class="product-media">
+          ${p.popular ? `<svg class="card-stamp" role="img" aria-label="Aunty Approved stamp"><use href="#stamp-badge"/></svg>` : ""}
           <!-- ${escapeHtml(p.image)} (replace with your AI-generated image) -->
-          <img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.imageAlt)}" width="400" height="300" loading="lazy">
+          <img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.imageAlt)}" width="1200" height="1200" loading="lazy">
         </div>
         <div class="product-body">
           <h3 id="pt-${p.id}">${escapeHtml(p.name)}</h3>
@@ -423,7 +424,7 @@ const CONFIG = {
     $("#productModalBody").innerHTML = `
       <div class="pm-grid">
         <div>
-          <div class="pm-media"><img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.imageAlt)}" width="400" height="300"></div>
+          <div class="pm-media"><img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.imageAlt)}" width="1200" height="1200"></div>
           <p class="img-note">Illustration only. Actual items may differ slightly.</p>
         </div>
         <div>
@@ -479,7 +480,7 @@ const CONFIG = {
     if (!lines.length) {
       body.innerHTML = `
         <div class="cart-empty">
-          <img class="empty-art" src="assets/starter-kit.svg" alt="">
+          <img class="empty-art" src="assets/starter-kit.jpg" alt="">
           <p><strong>Your cart is empty leh.</strong><br>Don't go bai nian empty-handed!</p>
           <a class="btn btn-primary" href="#shop" data-close>Shop the kits</a>
         </div>`;
