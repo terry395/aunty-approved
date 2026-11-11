@@ -38,9 +38,15 @@
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- ============ 1. ANNOUNCEMENT BAR ============ -->
+<!-- Announcement bar + header are pinned together at the top -->
+<div class="site-top">
+
+<!-- ============ 1. ANNOUNCEMENT BAR (pinned, sliding ticker) ============ -->
 <div class="announcement" id="announcement" role="region" aria-label="Announcement">
-  <p id="announcementText">Early-bird prices till 31 Dec · Free delivery above $50</p>
+  <p class="sr-only" id="announcementText">Early-bird prices till 31 Dec · Free delivery above $50</p>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
 </div>
 
 <!-- ============ 2. HEADER ============ -->
@@ -68,6 +74,7 @@
     </div>
   </div>
 </header>
+</div><!-- /.site-top -->
 
 <main id="main">
 
@@ -85,6 +92,7 @@
             <div class="cd-unit"><span class="cd-num" id="cdDays">--</span><span class="cd-name">days</span></div>
             <div class="cd-unit"><span class="cd-num" id="cdHours">--</span><span class="cd-name">hours</span></div>
             <div class="cd-unit"><span class="cd-num" id="cdMins">--</span><span class="cd-name">mins</span></div>
+            <div class="cd-unit"><span class="cd-num" id="cdSecs">--</span><span class="cd-name">secs</span></div>
           </div>
         </div>
 
@@ -232,7 +240,7 @@
 
       <!-- State A: orders closed -->
       <div class="orders-closed-banner" id="checkoutClosed" hidden>
-        <strong>Orders have closed for CNY 2027.</strong> Our last delivery run is out the door. If you have a question about an existing order, email us at <span class="placeholder">[CONTACT EMAIL]</span>.
+        <strong>Orders have closed for CNY 2027.</strong> Our last delivery run is out the door. If you have a question about an existing order, email us at <a href="https://mail.google.com/" target="_blank" rel="noopener">hello@auntyapproved.sg<span class="sr-only"> (opens in a new tab)</span></a>.
       </div>
 
       <!-- State B: empty cart, how pre-ordering works -->
@@ -251,7 +259,7 @@
         <div class="checkout-empty-cta">
           <p>Your cart is empty for now. Pick a kit and come back here to check out.</p>
           <a class="btn btn-primary" href="#shop">Shop the kits</a>
-          <p class="small muted">Questions first? Email <span class="placeholder">[CONTACT EMAIL]</span> or DM us on Instagram <span class="placeholder">[INSTAGRAM HANDLE]</span>.</p>
+          <p class="small muted">Questions first? Email <a href="https://mail.google.com/" target="_blank" rel="noopener">hello@auntyapproved.sg<span class="sr-only"> (opens in a new tab)</span></a> or DM us on Instagram <a href="https://www.instagram.com/" target="_blank" rel="noopener">@auntyapproved.sg<span class="sr-only"> (opens in a new tab)</span></a>.</p>
         </div>
       </div>
 
@@ -493,7 +501,7 @@
         </details>
         <details>
           <summary>Can I cancel my order?</summary>
-          <div class="acc-body"><p>Yes, free of charge, any time before dispatch (until <strong>25 Jan 2027</strong>). Just email <span class="placeholder">[CONTACT EMAIL]</span> with your order number. Personalised cheat sheets that have already been printed can't be cancelled. See <button type="button" class="link-btn" data-policy="delivery">Delivery &amp; Returns</button> for details.</p></div>
+          <div class="acc-body"><p>Yes, free of charge, any time before dispatch (until <strong>25 Jan 2027</strong>). Just email <a href="https://mail.google.com/" target="_blank" rel="noopener">hello@auntyapproved.sg<span class="sr-only"> (opens in a new tab)</span></a> with your order number. Personalised cheat sheets that have already been printed can't be cancelled. See <button type="button" class="link-btn" data-policy="delivery">Delivery &amp; Returns</button> for details.</p></div>
         </details>
       </div>
     </div>
@@ -518,8 +526,8 @@
       </ul>
     </nav>
     <ul class="footer-contact">
-      <li>Instagram: <span class="placeholder">[INSTAGRAM HANDLE]</span></li>
-      <li>Email: <span class="placeholder">[CONTACT EMAIL]</span></li>
+      <li>Instagram: <a href="https://www.instagram.com/" target="_blank" rel="noopener">@auntyapproved.sg<span class="sr-only"> (opens in a new tab)</span></a></li>
+      <li>Email: <a href="https://mail.google.com/" target="_blank" rel="noopener">hello@auntyapproved.sg<span class="sr-only"> (opens in a new tab)</span></a></li>
     </ul>
     <p class="copyright">© 2026 Aunty Approved · A student project. Payments on this site are demo only.</p>
   </div>
@@ -577,7 +585,7 @@
   <p>Product images are illustrations. The actual items may look slightly different.</p>
   <h3>7. Governing law</h3>
   <p>These terms are governed by the laws of Singapore.</p>
-  <p>Questions? Email <span class="placeholder">[CONTACT EMAIL]</span>.</p>
+  <p>Questions? Email <a href="https://mail.google.com/" target="_blank" rel="noopener">hello@auntyapproved.sg<span class="sr-only"> (opens in a new tab)</span></a>.</p>
 </template>
 
 <template id="tpl-privacy">
@@ -600,7 +608,7 @@
   <h3>How long we keep it</h3>
   <p>We keep your data only until the end of the CNY 2027 campaign, then delete it.</p>
   <h3>Your choices</h3>
-  <p>Want to see, correct or delete your data, or stop marketing emails? Email <span class="placeholder">[CONTACT EMAIL]</span> and we'll sort it out.</p>
+  <p>Want to see, correct or delete your data, or stop marketing emails? Email <a href="https://mail.google.com/" target="_blank" rel="noopener">hello@auntyapproved.sg<span class="sr-only"> (opens in a new tab)</span></a> and we'll sort it out.</p>
 </template>
 
 <template id="tpl-delivery">
@@ -613,7 +621,7 @@
     <li>We are <strong>delivery only</strong>. There is no self-collection.</li>
   </ul>
   <h3>Cancellations</h3>
-  <p>You can cancel for free any time before dispatch, until <strong>25 Jan 2027</strong>. Email <span class="placeholder">[CONTACT EMAIL]</span> with your order number.</p>
+  <p>You can cancel for free any time before dispatch, until <strong>25 Jan 2027</strong>. Email <a href="https://mail.google.com/" target="_blank" rel="noopener">hello@auntyapproved.sg<span class="sr-only"> (opens in a new tab)</span></a> with your order number.</p>
   <h3>Returns</h3>
   <ul>
     <li>Mandarin oranges and goodies are perishable, so we can't accept returns on food items.</li>

@@ -24,12 +24,13 @@
   --shadow: 0 6px 24px rgba(139, 0, 0, .10);
   --shadow-lg: 0 18px 48px rgba(43, 27, 23, .22);
   --header-h: 64px;
+  --announce-h: 36px;
   --gutter: 16px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + var(--announce-h) + 12px); -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
@@ -100,11 +101,18 @@ a:hover { color: var(--red-deep); }
 .icon-btn svg { width: 26px; height: 26px; }
 
 /* ---------- 1. Announcement ---------- */
-.announcement { background: var(--red-deep); color: var(--gold-light); text-align: center; font-weight: 700; font-size: .875rem; padding: 8px var(--gutter); }
-.announcement p { margin: 0; }
+.site-top { position: sticky; top: 0; z-index: 40; }
+.announcement { background: var(--red-deep); color: var(--gold-light); font-weight: 700; font-size: .875rem; height: var(--announce-h); overflow: hidden; display: flex; align-items: center; }
+.ticker { width: 100%; overflow: hidden; white-space: nowrap; }
+.ticker-track { display: inline-flex; width: max-content; animation: ticker 28s linear infinite; }
+.ticker-group { display: inline-flex; flex: 0 0 auto; }
+.ticker-group span { padding: 0 14px; }
+.ticker-sep { color: var(--gold); }
+.announcement:hover .ticker-track { animation-play-state: paused; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* ---------- 2. Header ---------- */
-.site-header { position: sticky; top: 0; z-index: 40; background: rgba(255, 248, 236, .96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.site-header { position: relative; background: rgba(255, 248, 236, .96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); gap: 12px; }
 .logo { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--red); font: 800 1.35rem/1 var(--font-head); }
 .logo:hover { color: var(--red-deep); }
@@ -141,10 +149,10 @@ a:hover { color: var(--red-deep); }
 
 .countdown { background: #fff; border: 2px solid var(--gold); border-radius: var(--radius); padding: 14px 16px; margin: 4px 0 22px; box-shadow: var(--shadow); max-width: 420px; }
 .countdown-label { margin: 0 0 8px; font-weight: 700; font-size: .9rem; color: var(--red-deep); }
-.countdown-units { display: flex; gap: 10px; }
+.countdown-units { display: flex; gap: 8px; }
 .cd-unit { flex: 1; background: var(--red); color: #fff; border-radius: var(--radius-sm); text-align: center; padding: 8px 4px; }
-.cd-num { display: block; font: 800 2rem/1.1 var(--font-head); font-variant-numeric: tabular-nums; color: var(--gold-light); }
-.cd-name { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+.cd-num { display: block; font: 800 clamp(1.6rem, 7vw, 2rem)/1.1 var(--font-head); font-variant-numeric: tabular-nums; color: var(--gold-light); }
+.cd-name { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
 .countdown.done .countdown-units { display: none; }
 
 .hero-ctas { display: flex; flex-direction: column; gap: 12px; }
@@ -362,7 +370,8 @@ a:hover { color: var(--red-deep); }
 .footer-name { font: 800 1.4rem var(--font-head); color: #fff; margin: 0; }
 .footer-tag { margin: 0; font-size: .95rem; }
 .footer-links, .footer-contact { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
-.site-footer .link-btn { color: var(--gold-light); min-height: 36px; }
+.site-footer .link-btn, .site-footer a { color: var(--gold-light); min-height: 36px; }
+.site-footer a:hover { color: #fff; }
 .site-footer .link-btn:hover { color: #fff; }
 .copyright { margin: 0; font-size: .85rem; color: #BFAE9A; border-top: 1px solid #4A3630; padding-top: 16px; }
 
@@ -459,5 +468,7 @@ dialog::backdrop { background: rgba(43, 27, 23, .55); }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none !important; width: 100%; justify-content: center; }
+  .ticker-group + .ticker-group, .ticker-group > span:nth-child(n+2) { display: none; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
