@@ -296,10 +296,14 @@ const CONFIG = {
      ========================================================= */
   function renderAnnouncement() {
     const p = phase();
-    $("#announcementText").textContent =
+    const msg =
       p === "earlyBird" ? `Early-bird prices till 31 Dec · Free delivery above $${CONFIG.delivery.freeThreshold}` :
       p === "usual" ? "Order by 30 Jan for guaranteed delivery before CNY" :
       "Orders have closed for CNY 2027 · Gong xi fa cai!";
+    $("#announcementText").textContent = msg;
+    // Ticker: two identical groups so the -50% slide loops seamlessly
+    const group = `<span class="ticker-group">${Array(4).fill(`<span>${escapeHtml(msg)}</span><span class="ticker-sep">✦</span>`).join("")}</span>`;
+    $("#tickerTrack").innerHTML = group + group;
     $("#shopLead").textContent =
       p === "earlyBird" ? "Early-bird prices till 31 Dec. Every kit is delivered to your door before CNY." :
       p === "usual" ? "Order by 30 Jan and every kit is delivered to your door by 3 Feb." :
@@ -314,10 +318,11 @@ const CONFIG = {
       $("#countdownLabel").textContent = "新年快乐! Happy Year of the Goat. Hope the aunties approved!";
       return;
     }
-    const mins = Math.floor(diff / 60000);
-    $("#cdDays").textContent = Math.floor(mins / 1440);
-    $("#cdHours").textContent = pad(Math.floor((mins % 1440) / 60));
-    $("#cdMins").textContent = pad(mins % 60);
+    const secs = Math.floor(diff / 1000);
+    $("#cdDays").textContent = Math.floor(secs / 86400);
+    $("#cdHours").textContent = pad(Math.floor((secs % 86400) / 3600));
+    $("#cdMins").textContent = pad(Math.floor((secs % 3600) / 60));
+    $("#cdSecs").textContent = pad(secs % 60);
   }
 
   let lastPhase = phase();

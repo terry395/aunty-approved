@@ -18,8 +18,8 @@ A mobile-first online shop for young couples in Singapore visiting their partner
 | --- | --- |
 | `PASTE_YOUR_APPS_SCRIPT_URL_HERE` | `ORDERS_SHEET_URL`, top of `script.js` |
 | `<!-- PASTE AUNTY COACH CHATBOT EMBED SCRIPT HERE -->` | Just before `</body>` in `index.html` |
-| `[INSTAGRAM HANDLE]` | `index.html` (footer, checkout section) |
-| `[CONTACT EMAIL]` | `index.html` (footer, checkout, FAQ, all three policies) |
+| Instagram `@auntyapproved.sg` (fictional, links to instagram.com) | `index.html`: search `auntyapproved.sg` (footer, checkout section) |
+| Email `hello@auntyapproved.sg` (fictional, links to gmail.com) | `index.html`: search `hello@auntyapproved.sg` (footer, checkout, FAQ, all three policies) |
 | `[DEMO-UEN-000000000X]` | `CONFIG.payment.demoUen` in `script.js` (keep it fake) |
 | Kit images | `assets/*.svg`. Drop in e.g. `assets/classic-kit.jpg` and update `image:` in `CONFIG.products` |
 
