@@ -9,7 +9,7 @@
    While it is the placeholder, the site runs in DEMO MODE:
    orders are logged to the browser console instead of being sent.
    --------------------------------------------------------- */
-const ORDERS_SHEET_URL = "PASTE_YOUR_APPS_SCRIPT_URL_HERE";
+const ORDERS_SHEET_URL = "https://script.google.com/macros/s/AKfycbyZYkd2tGEslZVIkJvzMpGr6YhBwJdh2IOiw_lPb3tWv8LPyq-G-j1OaSTAuoLlYbEnTQ/exec";
 
 /* ---------------------------------------------------------
    ✏️  EDIT EVERYTHING HERE: products, prices, dates, delivery.
