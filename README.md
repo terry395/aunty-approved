@@ -17,7 +17,6 @@ A mobile-first online shop for young couples in Singapore visiting their partner
 | Placeholder | Where |
 | --- | --- |
 | `PASTE_YOUR_APPS_SCRIPT_URL_HERE` | `ORDERS_SHEET_URL`, top of `script.js` |
-| `<!-- PASTE AUNTY COACH CHATBOT EMBED SCRIPT HERE -->` | Just before `</body>` in `index.html` |
 | Instagram `@auntyapproved.sg` (fictional, links to instagram.com) | `index.html`: search `auntyapproved.sg` (footer, checkout section) |
 | Email `hello@auntyapproved.sg` (fictional, links to gmail.com) | `index.html`: search `hello@auntyapproved.sg` (footer, checkout, FAQ, all three policies) |
 | `[DEMO-UEN-000000000X]` | `CONFIG.payment.demoUen` in `script.js` (keep it fake) |
@@ -34,13 +33,9 @@ Set `allowTimeTravel: false` before launch if you don't want people to be able t
 
 ## Aunty Coach chatbot
 
-The "Chat with Aunty Coach" buttons try common widget APIs (Botpress, Voiceflow, Tawk, Crisp, Chatbase, Intercom). If your chatbot opens differently, add this to your embed:
+Aunty Coach is built in Botpress and embedded just before `</body>` in `index.html`. The chat bubble appears bottom-right, and every "Chat with Aunty Coach" button opens it. If the Botpress bubble can't load, the buttons open the shareable chat page in a new tab instead.
 
-```html
-<script>window.openAuntyCoachWidget = () => { /* open your chat widget here */ };</script>
-```
-
-If no widget is found, visitors see "Aunty Coach is getting ready. Come back soon!"
+To change the bot, edit it in Botpress Studio and publish. The website picks up the changes automatically. If Botpress ever gives you a new embed code, replace the two Botpress `<script>` lines in `index.html` (and the link inside `openAuntyCoachWidget`).
 
 ## Run locally
 

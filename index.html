@@ -585,6 +585,18 @@
 
 <script src="script.js"></script>
 
-<!-- PASTE AUNTY COACH CHATBOT EMBED SCRIPT HERE -->
+<!-- Aunty Coach chatbot (Botpress webchat) -->
+<script src="https://cdn.botpress.cloud/webchat/v3.7/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/11/25/02/20261125022453-2T8AMLC0.js" defer></script>
+<script>
+  // "Chat with Aunty Coach" buttons: open the Botpress bubble.
+  // If Botpress hasn't loaded (blocked or offline), open the chat page in a new tab instead.
+  window.openAuntyCoachWidget = function () {
+    try {
+      if (window.botpress && typeof window.botpress.open === "function") { window.botpress.open(); return; }
+    } catch (e) { /* fall through to the chat page */ }
+    window.open("https://cdn.botpress.cloud/webchat/v3.7/shareable.html?configUrl=https://files.bpcontent.cloud/2026/11/25/02/20261125022453-2T8AMLC0.json", "_blank", "noopener");
+  };
+</script>
 </body>
 </html>
