@@ -35,7 +35,7 @@ Set `allowTimeTravel: false` before launch if you don't want people to be able t
 
 Aunty Coach is built in Botpress and embedded just before `</body>` in `index.html`. The chat bubble appears bottom-right, and every "Chat with Aunty Coach" button opens it. If the Botpress bubble can't load, the buttons open the shareable chat page in a new tab instead.
 
-To change the bot, edit it in Botpress Studio and publish. The website picks up the changes automatically. If Botpress ever gives you a new embed code, replace the two Botpress `<script>` lines in `index.html` (and the link inside `openAuntyCoachWidget`).
+To change the bot, edit it in Botpress Studio and publish. The website picks up the changes automatically. The bot's ID, client ID and look (name, colour, avatar) are in the `botpress.init({...})` block in `index.html`, copied from the Botpress shareable config JSON. If you change the look in Botpress or get a new config link, update that block (and `CHAT_PAGE`) to match.
 
 ## Run locally
 
