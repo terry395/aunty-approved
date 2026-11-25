@@ -1,0 +1,13 @@
+{
+  "name": "aunty-approved",
+  "private": true,
+  "description": "Aunty Approved static site + Aunty Coach chat function (Netlify)",
+  "scripts": {
+    "build:knowledge": "node scripts/build-aunty-knowledge.mjs",
+    "check:knowledge": "node scripts/build-aunty-knowledge.mjs --check",
+    "test": "node scripts/build-aunty-knowledge.mjs --check && node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.14.0"
+  }
+}

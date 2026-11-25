@@ -1,4 +1,42 @@
 # Netlify config: plain static site, no build step.
+# Netlify installs package.json dependencies automatically (for the chat function).
 [build]
   publish = "."
   command = ""
+
+# Aunty Coach chat function lives in netlify/functions/aunty-coach/
+# It is served at /api/aunty-coach (see `config` in aunty-coach.mjs).
+# Set ANTHROPIC_API_KEY in Netlify: Site configuration > Environment variables.
+[functions]
+  directory = "netlify/functions"
+
+# Don't serve source/dev files as web pages (they hold no secrets, this just keeps the site tidy)
+[[redirects]]
+  from = "/node_modules/*"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/netlify/*"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/aunty-coach/*"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/scripts/*"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/tests/*"
+  to = "/404"
+  status = 404
+  force = true

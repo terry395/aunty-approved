@@ -11,13 +11,16 @@ A mobile-first online shop for young couples in Singapore visiting their partner
 | `assets/` | Kit illustrations (SVG). Replace with your own images. |
 | `screenshots/` | Test screenshots (mobile + desktop) for the report |
 | `netlify.toml` | Netlify hosting config (no build, publish the root) |
+| `coach-widget.js` / `coach-widget.css` | Aunty Coach chat bubble + window, incl. the Relative Calculator |
+| `netlify/functions/aunty-coach/` | Server-side chat endpoint (`/api/aunty-coach`) that talks to Claude. Holds no secrets. |
+| `aunty-coach/` | The original Python version of Aunty Coach + its system prompt and Knowledge Base (the website uses the same files) |
+| `scripts/`, `tests/`, `package.json` | Keeps the website bot in sync with `aunty-coach/`, and tests |
 
 ## Placeholders to replace
 
 | Placeholder | Where |
 | --- | --- |
 | `PASTE_YOUR_APPS_SCRIPT_URL_HERE` | `ORDERS_SHEET_URL`, top of `script.js` |
-| `<!-- PASTE AUNTY COACH CHATBOT EMBED SCRIPT HERE -->` | Just before `</body>` in `index.html` |
 | Instagram `@auntyapproved.sg` (fictional, links to instagram.com) | `index.html`: search `auntyapproved.sg` (footer, checkout section) |
 | Email `hello@auntyapproved.sg` (fictional, links to gmail.com) | `index.html`: search `hello@auntyapproved.sg` (footer, checkout, FAQ, all three policies) |
 | `[DEMO-UEN-000000000X]` | `CONFIG.payment.demoUen` in `script.js` (keep it fake) |
@@ -34,13 +37,30 @@ Set `allowTimeTravel: false` before launch if you don't want people to be able t
 
 ## Aunty Coach chatbot
 
-The "Chat with Aunty Coach" buttons try common widget APIs (Botpress, Voiceflow, Tawk, Crisp, Chatbase, Intercom). If your chatbot opens differently, add this to your embed:
+The 🍊 bubble (bottom-right) and every "Chat with Aunty Coach" button open the chat.
 
-```html
-<script>window.openAuntyCoachWidget = () => { /* open your chat widget here */ };</script>
+- **AI answers** come from `netlify/functions/aunty-coach/`, which sends the chat to Claude with Aunty's system prompt and Knowledge Base. The API key stays on Netlify and is never sent to the browser.
+- **Relative Calculator** (type `calculator`) runs in the browser, so it works even without an API key.
+
+### Turn on the AI (one time)
+
+1. Get an API key from https://console.anthropic.com
+2. In Netlify: **Site configuration → Environment variables → Add a variable**: `ANTHROPIC_API_KEY` = your key. Scope it to **Functions**.
+3. Redeploy (Deploys → Trigger deploy).
+
+Until the key is set, Aunty politely points people to hello@auntyapproved.sg and the calculator still works. Optional: `AUNTY_MODEL` to change the Claude model (default `claude-haiku-5-5`).
+
+Safety limits built in: only this website can call the endpoint, max 15 messages per minute per visitor, messages capped at 1000 characters, last 20 turns only, errors never shown to visitors.
+
+### Changing what Aunty knows
+
+Edit `aunty-coach/system_prompt.txt` or `aunty-coach/knowledge/*.md` (the Python bot uses them too), then run:
+
+```bash
+npm run build:knowledge
 ```
 
-If no widget is found, visitors see "Aunty Coach is getting ready. Come back soon!"
+Run the tests with `npm test`. They also check the browser calculator gives the same answers as `aunty-coach/calculator.py`.
 
 ## Run locally
 
@@ -48,4 +68,4 @@ If no widget is found, visitors see "Aunty Coach is getting ready. Come back soo
 python3 -m http.server 8080
 ```
 
-Then open http://localhost:8080.
+Then open http://localhost:8080. (The AI chat needs Netlify: use `npx netlify dev` to run the function locally too. The calculator works either way.)
