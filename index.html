@@ -585,18 +585,49 @@
 
 <script src="script.js"></script>
 
-<!-- Aunty Coach chatbot (Botpress webchat) -->
+<!-- Aunty Coach chatbot (Botpress webchat). Settings copied from the Botpress shareable config:
+     https://files.bpcontent.cloud/2026/11/25/02/20261125022453-2T8AMLC0.json -->
 <script src="https://cdn.botpress.cloud/webchat/v3.7/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2026/11/25/02/20261125022453-2T8AMLC0.js" defer></script>
 <script>
-  // "Chat with Aunty Coach" buttons: open the Botpress bubble.
-  // If Botpress hasn't loaded (blocked or offline), open the chat page in a new tab instead.
-  window.openAuntyCoachWidget = function () {
+  (function () {
+    var CHAT_PAGE = "https://cdn.botpress.cloud/webchat/v3.7/shareable.html?configUrl=https://files.bpcontent.cloud/2026/11/25/02/20261125022453-2T8AMLC0.json";
+    var ready = false;
+
     try {
-      if (window.botpress && typeof window.botpress.open === "function") { window.botpress.open(); return; }
-    } catch (e) { /* fall through to the chat page */ }
-    window.open("https://cdn.botpress.cloud/webchat/v3.7/shareable.html?configUrl=https://files.bpcontent.cloud/2026/11/25/02/20261125022453-2T8AMLC0.json", "_blank", "noopener");
-  };
+      window.botpress.on("webchat:initialized", function () { ready = true; });
+      window.botpress.on("webchat:ready", function () { ready = true; });
+      window.botpress.init({
+        botId: "fb5362f6-4205-4fc4-a8ca-e10b3a0903ca",
+        clientId: "c2cf9974-a2d6-414a-96bd-c62918faaca5",
+        configuration: {
+          version: "v2",
+          botName: "Aunty Coach",
+          botAvatar: "https://files.bpcontent.cloud/2026/11/25/05/20261125054549-KHQ4OMLE.svg",
+          botDescription: "First time bai nian at their house? Aunty got you. Ask about our kits, delivery, and what to call the relatives.",
+          website: { title: "https://aunty-approved.netlify.app", link: "https://aunty-approved.netlify.app" },
+          email: { title: "hello@auntyapproved.sg", link: "hello@auntyapproved.sg" },
+          phone: {}, termsOfService: {}, privacyPolicy: {},
+          color: "#C8102E", variant: "solid", headerVariant: "solid", themeMode: "light",
+          fontFamily: "inter", radius: 4, feedbackEnabled: false,
+          footer: "[⚡ by Botpress](https://botpress.com/?from=webchat)",
+          soundEnabled: false, proactiveMessageEnabled: false,
+          conversationHistory: false, homePageEnabled: false, mainCardEnabled: false,
+          conversationStartersEnabled: false, conversationStarters: []
+        }
+      });
+    } catch (e) {
+      console.warn("[Aunty Coach] Botpress could not start:", e);
+    }
+
+    // "Chat with Aunty Coach" buttons: open the bubble once Botpress is ready,
+    // otherwise open the chat page in a new tab, so a click always does something.
+    window.openAuntyCoachWidget = function () {
+      try {
+        if (ready && window.botpress && typeof window.botpress.open === "function") { window.botpress.open(); return; }
+      } catch (e) { /* fall through to the chat page */ }
+      window.open(CHAT_PAGE, "_blank", "noopener");
+    };
+  })();
 </script>
 </body>
 </html>
